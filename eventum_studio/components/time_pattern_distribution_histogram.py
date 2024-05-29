@@ -3,7 +3,7 @@ from typing import Iterable
 
 import numpy as np
 import pandas as pd
-import plotly.graph_objects as go  # type: ignore
+import plotly.graph_objects as go  # type: ignore[import-untyped]
 import streamlit as st
 from eventum_plugins.input.base import InputPluginRuntimeError
 from eventum_plugins.input.time_patterns import (TimePatternConfig,
@@ -152,6 +152,6 @@ class TimePatternDistributionHistogram(BaseComponent):
             'Recalculate',
             use_container_width=True,
             key=self._wk.get_ephemeral(),
-            on_click=_calculate_sample.clear,   # type: ignore
+            on_click=_calculate_sample.clear,   # type: ignore[attr-defined]
             type='primary'
         )

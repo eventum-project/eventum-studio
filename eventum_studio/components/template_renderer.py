@@ -10,7 +10,7 @@ from eventum_plugins.event.jinja import (JinjaEventConfig, JinjaEventPlugin,
                                          TemplatePickingMode)
 from jinja2 import DictLoader
 from pydantic import ValidationError
-from streamlit_elements import editor, elements  # type: ignore
+from streamlit_elements import editor, elements  # type: ignore[import-untyped]
 
 from eventum_studio.components.component import BaseComponent
 from eventum_studio.notifiers import NotificationLevel, default_notifier
@@ -64,7 +64,7 @@ class TemplateRenderer(BaseComponent):
             config = JinjaEventConfig(
                 mode=TemplatePickingMode.ALL,
                 templates={
-                    'template': TemplateConfig(      # type: ignore
+                    'template': TemplateConfig(     # type: ignore[call-arg]
                         template='template.jinja'
                     )
                 },
@@ -209,4 +209,4 @@ class TemplateRenderer(BaseComponent):
     def subprocess_commands_history(self) -> tuple[tuple[int, str], ...]:
         """Get history of commands running in templates via `subprocess`."""
         subprocess_manager = self._session_state['subprocess_manager']
-        return subprocess_manager.commands_history      # type: ignore
+        return subprocess_manager.commands_history

@@ -1,7 +1,8 @@
 from typing import Callable
 
 import streamlit as st
-from streamlit_elements import editor, elements, event, lazy  # type: ignore
+from streamlit_elements import editor  # type: ignore[import-untyped]
+from streamlit_elements import elements, event, lazy
 
 from eventum_studio.components.component import BaseComponent
 from eventum_studio.components.sample_explorer import SampleExplorer

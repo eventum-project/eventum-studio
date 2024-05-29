@@ -72,7 +72,7 @@ class TimePatternConfiguratorList(BaseComponent):
                 or not selected_pattern
             ),
             on_click=lambda: self._load(
-                filename=selected_pattern   # type: ignore
+                filename=selected_pattern
             ),
             use_container_width=True,
         )

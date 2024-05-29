@@ -46,13 +46,8 @@ class TemplateManager(BaseComponent):
         col2.button(
             'Load',
             key=self._wk.get_ephemeral(),
-            disabled=(
-                not is_empty
-                or not selected_template
-            ),
-            on_click=lambda: self._load(
-                filename=selected_template   # type: ignore
-            ),
+            disabled=(not is_empty or not selected_template),
+            on_click=lambda: self._load(filename=selected_template),
             use_container_width=True,
         )
 

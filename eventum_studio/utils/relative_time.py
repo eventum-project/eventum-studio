@@ -1,6 +1,5 @@
 import re
 from datetime import timedelta
-from typing import assert_never
 
 
 def validate_time_span(expression: str) -> bool:
@@ -52,7 +51,7 @@ def parse_relative_time(expression: str) -> timedelta:
         case '-':
             sign = -1
         case char:
-            assert_never(char)  # type: ignore
+            raise ValueError(f'Unexpected sign "{char}"')
 
     return timedelta(
         **{
