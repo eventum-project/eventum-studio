@@ -1,2 +1,2 @@
 # EventumStudio
-Eventum Studio - content designer for Eventum 
+Content designer for Eventum 
