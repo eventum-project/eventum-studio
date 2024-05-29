@@ -1,3 +1,4 @@
+import os
 from datetime import datetime
 
 import streamlit as st
@@ -10,9 +11,13 @@ from eventum_studio.components.time_pattern_distribution_histogram import \
     TimePatternDistributionHistogram
 from eventum_studio.theme import apply_theme
 
+BASE_DIR = os.path.abspath(os.path.dirname(__file__))
+ICON_PATH = os.path.join(BASE_DIR, './static/favicon.ico')
+
 persist_state()
 st.set_page_config(
     page_title='Eventum Studio',
+    page_icon=ICON_PATH,
     layout='wide',
     initial_sidebar_state='expanded'
 )

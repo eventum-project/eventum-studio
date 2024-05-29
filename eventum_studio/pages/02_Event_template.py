@@ -1,3 +1,5 @@
+import os
+
 import streamlit as st
 
 from eventum_studio.components.component import persist_state
@@ -9,9 +11,13 @@ from eventum_studio.components.template_renderer import TemplateRenderer
 from eventum_studio.components.template_state_viewer import TemplateStateViewer
 from eventum_studio.theme import apply_theme
 
+BASE_DIR = os.path.abspath(os.path.dirname(__file__))
+ICON_PATH = os.path.join(BASE_DIR, '../static/favicon.ico')
+
 persist_state()
 st.set_page_config(
     page_title='Eventum Studio',
+    page_icon=ICON_PATH,
     layout='wide',
     initial_sidebar_state='expanded'
 )

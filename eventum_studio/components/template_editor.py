@@ -1,8 +1,8 @@
 from typing import Callable
 
 import streamlit as st
-from streamlit_elements import (editor,  # type: ignore[import-untyped]
-                                elements, event, lazy)
+from streamlit_elements import editor  # type: ignore[import-untyped]
+from streamlit_elements import elements, event, lazy
 
 from eventum_studio.components.component import BaseComponent
 from eventum_studio.notifiers import NotificationLevel, default_notifier
