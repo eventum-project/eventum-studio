@@ -14,7 +14,7 @@ from streamlit_elements import editor, elements  # type: ignore
 
 from eventum_studio.components.component import BaseComponent
 from eventum_studio.notifiers import NotificationLevel, default_notifier
-from eventum_studio.validation_prettier import prettify_errors
+from eventum_studio.utils.validation_prettier import prettify_errors
 
 
 class TemplateRenderer(BaseComponent):
@@ -82,9 +82,11 @@ class TemplateRenderer(BaseComponent):
 
         timestamp = datetime.now().astimezone()
         tz = timestamp.strftime('%z')
-        timestamp = timestamp.replace(tzinfo=None).isoformat()
 
-        params = {'timestamp': timestamp, 'tz': tz}
+        params = {
+            'timestamp': timestamp.replace(tzinfo=None).isoformat(),
+            'tz': tz
+        }
 
         local_vars: dict | None = self._session_state['local_vars_state']
         shared_vars: State | None = self._session_state['shared_vars_state']

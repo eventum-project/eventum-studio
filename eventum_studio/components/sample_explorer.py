@@ -23,15 +23,17 @@ class SampleExplorer(BaseComponent):
         )
         try:
             if sample is not None:
-                sample_data = load_csv_sample(sample)
+                sample_data = load_csv_sample(  # type: ignore[assignment]
+                    path=sample
+                )
             else:
-                sample_data = []
+                sample_data = []                # type: ignore[assignment]
         except ContentManagementError as e:
             default_notifier(
                 message=f'Failed to load sample: {e}',
                 level=NotificationLevel.ERROR
             )
-            sample_data = []
+            sample_data = []                    # type: ignore[assignment]
 
         total_size = len(sample_data)
         display_size = self._props['display_size']

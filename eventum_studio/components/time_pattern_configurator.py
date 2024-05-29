@@ -8,7 +8,7 @@ from pydantic import ValidationError
 
 from eventum_studio.components.component import BaseComponent
 from eventum_studio.notifiers import NotificationLevel, default_notifier
-from eventum_studio.validation_prettier import prettify_errors
+from eventum_studio.utils.validation_prettier import prettify_errors
 
 
 class TimePatternConfigurator(BaseComponent):

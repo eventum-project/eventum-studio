@@ -12,7 +12,7 @@ from eventum_studio.components.component import (BaseComponent,
 from eventum_studio.components.time_pattern_configurator import \
     TimePatternConfigurator
 from eventum_studio.notifiers import NotificationLevel, default_notifier
-from eventum_studio.validation_prettier import prettify_errors
+from eventum_studio.utils.validation_prettier import prettify_errors
 from eventum_studio.widget_management import WidgetKeysContext
 
 

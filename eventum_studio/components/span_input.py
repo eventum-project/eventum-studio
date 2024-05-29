@@ -1,8 +1,8 @@
-import re
 import streamlit as st
 
 from eventum_studio.components.component import BaseComponent
 from eventum_studio.notifiers import NotificationLevel, default_notifier
+from eventum_studio.utils.relative_time import validate_time_span
 
 
 class SpanInput(BaseComponent):
@@ -40,7 +40,7 @@ class SpanInput(BaseComponent):
 
     def _check_expression(self) -> None:
         ss = self._session_state
-        if not re.match(r'^\d+[smhd]$', ss['span_expression']):
+        if not validate_time_span(ss['span_expression']):
             ss['span_expression'] = ss['previous_span_expression']
             default_notifier(
                 message='Incorrect span expression',
