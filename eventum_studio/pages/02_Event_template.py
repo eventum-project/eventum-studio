@@ -25,7 +25,13 @@ apply_theme()
 
 for key in ['template_content', 'config_content']:
     if key not in st.session_state:
-        st.session_state[key] = ''
+        if key == 'config_content':
+            st.session_state[key] = (
+                'params: { }\n'
+                'samples: { }\n'
+            )
+        else:
+            st.session_state[key] = ''
 
 manager = TemplateManager(
     props={
@@ -48,6 +54,7 @@ editor = TemplateEditor(
 )
 config_editor = TemplateConfigurationEditor(
     props={
+        'content': st.session_state['config_content'],
         'on_change': (
             lambda value:
             st.session_state.__setitem__('config_content', value)
@@ -57,7 +64,7 @@ config_editor = TemplateConfigurationEditor(
 renderer = TemplateRenderer(
     props={
         'template_content': st.session_state['template_content'],
-        'configuration_content': config_editor.content
+        'configuration_content': st.session_state['config_content']
     }
 )
 state_viewer = TemplateStateViewer(
