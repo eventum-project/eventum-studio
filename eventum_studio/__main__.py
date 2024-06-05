@@ -1,11 +1,11 @@
 import argparse
 import os
 import sys
+from importlib.metadata import version
 
-import pkg_resources
 import streamlit.web.cli as st_cli
 
-VERSION = pkg_resources.get_distribution('eventum_studio').version
+VERSION = version('eventum_studio')
 BASE_PATH = os.path.dirname(os.path.abspath(__file__))
 STUDIO_ENTRYPOINT = os.path.join(BASE_PATH, '01_Time_distribution.py')
 
