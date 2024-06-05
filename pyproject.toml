@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "eventum-studio"
-version = "1.0.8"
+version = "1.0.9"
 description = "Content designer for Eventum "
 license = "Apache-2.0"
 authors = ["Nikita Reznikov <nikita.reznikov.public@mail.ru>"]
@@ -30,7 +30,7 @@ pandas = "^2.2.1"
 plotly = "^5.20.0"
 streamlit-elements = "^0.1.0"
 eventum-content-manager = "^1.0.5"
-eventum-plugins = "^1.0.1"
+eventum-plugins = "1.0.4"
 pytz = "^2024.1"
 tzlocal = "^5.2"
 

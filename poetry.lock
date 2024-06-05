@@ -575,13 +575,13 @@ types-pyyaml = ">=6.0.12.20240311,<7.0.0.0"
 
 [[package]]
 name = "eventum-plugins"
-version = "1.0.2"
+version = "1.0.4"
 description = "Plugins for Eventum"
 optional = false
 python-versions = "<4.0,>=3.11"
 files = [
-    {file = "eventum_plugins-1.0.2-py3-none-any.whl", hash = "sha256:0fb9bdaaf840928d6e1670ad42f5fc02fe92edb2e3a7fcbc28e0b16ec8f6b217"},
-    {file = "eventum_plugins-1.0.2.tar.gz", hash = "sha256:d8e915614493383df90cab4b011c925acc9fa2236207b11e645e2ea82eb5385b"},
+    {file = "eventum_plugins-1.0.4-py3-none-any.whl", hash = "sha256:c7a4bf6b63497712537310dea17a7772f7e13da34f4035a7d77743fdcd376b28"},
+    {file = "eventum_plugins-1.0.4.tar.gz", hash = "sha256:52871acf907169fe02c5e9c1feb3ccfb4e5e3146a14241794128b31a157bced5"},
 ]
 
 [package.dependencies]
@@ -2429,4 +2429,4 @@ test = ["big-O", "jaraco.functools", "jaraco.itertools", "jaraco.test", "more-it
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.11"
-content-hash = "e64150dd1741be89616af2a8099117b01c3e9b7a78de62f45f48a1ed9d93da34"
+content-hash = "f46a4557dcb3e612ba9fe6cbc015a27758bce4912079a56ee868cc36c7ffe3ed"
