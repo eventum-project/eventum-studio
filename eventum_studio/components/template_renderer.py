@@ -2,8 +2,6 @@ from datetime import datetime
 
 import streamlit as st
 import yaml
-from eventum_plugins.event.base import (EventPluginConfigurationError,
-                                        EventPluginRuntimeError)
 from eventum_plugins.event.jinja import (JinjaEventConfig, JinjaEventPlugin,
                                          State, SubprocessManager,
                                          SubprocessManagerMock, TemplateConfig,
@@ -111,7 +109,7 @@ class TemplateRenderer(BaseComponent):
                 plugin.subprocess_manager = subprocess_manager
 
             result = plugin.render(**params)
-        except (EventPluginConfigurationError, EventPluginRuntimeError) as e:
+        except Exception as e:
             default_notifier(
                 message=(f'Failed to render template: {e}'),
                 level=NotificationLevel.ERROR

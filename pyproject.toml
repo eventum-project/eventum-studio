@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "eventum-studio"
-version = "1.0.9"
+version = "1.0.10"
 description = "Content designer for Eventum "
 license = "Apache-2.0"
 authors = ["Nikita Reznikov <nikita.reznikov.public@mail.ru>"]
