@@ -61,11 +61,11 @@ class TemplateRenderer(BaseComponent):
         try:
             config = JinjaEventConfig(
                 mode=TemplatePickingMode.ALL,
-                templates={
+                templates=[{
                     'template': TemplateConfig(     # type: ignore[call-arg]
                         template='template.jinja'
                     )
-                },
+                }],
                 **config_data
             )
         except ValidationError as e:
