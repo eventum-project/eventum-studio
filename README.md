@@ -1,2 +1,3 @@
 # EventumStudio
-Content designer for Eventum 
+
+Integrated development environment for Eventum
